@@ -38,12 +38,14 @@ public class faceBookSteps {
 		String emailID = (String) getData.get("EMAILID");
 		String moibleNumber = (String) getData.get("MOBILENUMBER");
 		String password = (String) getData.get("PASSWORD");
-
+		
 		faceBookObj = new faceBookPO();
 
 		faceBookObj.FaceBookLogin(userName, lastName, emailID, moibleNumber, password);
 		faceBookObj.enterBody();
 		faceBookObj.signpButton();
+		System.out.println("Values are entered");
+
 	}
 
 	@Then("user is navigated to fb homepage")
