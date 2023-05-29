@@ -44,7 +44,7 @@ public class faceBookSteps {
 		faceBookObj.FaceBookLogin(userName, lastName, emailID, moibleNumber, password);
 		faceBookObj.enterBody();
 		faceBookObj.signpButton();
-		System.out.println("Values are entered properly");
+		System.out.println("Values are entered properly for testing");
 
 	}
 
