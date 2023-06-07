@@ -1,4 +1,4 @@
-package faceBookStepDefination;
+package globalMethods;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -25,33 +25,31 @@ public class Hooks {
 		options.addArguments("--remote-allow-origins=*");
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver(options);
-		
-		if(faceBookTestRunnerFile_JUnit.URLstatus) {
+
+		if (faceBookTestRunnerFile_JUnit.URLstatus) {
 			URL = faceBookTestRunnerFile_JUnit.siteURL;
 		}
-		if(faceBookTestRunnerFile_TestNG.URLstatus) {
+		if (faceBookTestRunnerFile_TestNG.URLstatus) {
 			URL = faceBookTestRunnerFile_TestNG.siteURL;
 		}
-		
+
 		driver.get(URL);
 		driver.manage().window().maximize();
 
 	}
-	
-	
+
 	@After
 	public static void close(Scenario scenario) {
-		
+
 		if (scenario.isFailed()) {
 			TakesScreenshot ts = (TakesScreenshot) driver;
 
 			byte[] screenshot = ts.getScreenshotAs(OutputType.BYTES);
 			scenario.attach(screenshot, "image/png", "Screenshot");
 		}
-		
+
 		driver.close();
 		driver.quit();
 	}
-	
-	
+
 }

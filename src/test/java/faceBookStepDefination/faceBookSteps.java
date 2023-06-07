@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.HashMap;
 import org.openqa.selenium.WebDriver;
 import faceBookPage.faceBookPO;
+import globalMethods.Hooks;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -24,7 +25,7 @@ public class faceBookSteps {
 	
 	@When("provide all the details")
 	public void provide_all_the_details() {
-		System.out.println("This is for testing purpose");
+		System.out.println("This is  for   testing purpose");
 		
 	}
 
@@ -44,7 +45,7 @@ public class faceBookSteps {
 		faceBookObj.FaceBookLogin(userName, lastName, emailID, moibleNumber, password);
 		faceBookObj.enterBody();
 		faceBookObj.signpButton();
-		System.out.println("Values are entered properly for testing");
+		System.out.println("Values are entered prorly for testing");
 
 	}
 

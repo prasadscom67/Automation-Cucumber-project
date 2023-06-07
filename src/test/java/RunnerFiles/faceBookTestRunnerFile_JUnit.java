@@ -8,12 +8,17 @@ import io.cucumber.junit.CucumberOptions;
 
 @CucumberOptions(
 
-		features = { "src\\test\\resources\\features\\faceBook.feature",
-				"src\\test\\resources\\features\\amazon.feature",
-				"src\\test\\resources\\features\\Testing.feature"
+		features = { "src\\test\\resources\\features\\FACEBOOK.feature"
+				     //"src\\test\\resources\\features\\amazon.feature",
+				     //"src\\test\\resources\\features\\Testing.feature",
 					 //"src\\test\\resources\\features\\amazon.feature"
+				     //"src\\test\\resources\\features\\DBTesting.feature"
 				},
-		glue = { "faceBookStepDefination" },
+		
+				glue = { "globalMethods",
+						 "faceBookStepDefination"
+						 //"DBTESTINGStepDefination"
+				},
 		
 		plugin = { "pretty", 
 				   "html:target/CUCUMBER-REPORT_JUnit.html",
@@ -24,8 +29,8 @@ import io.cucumber.junit.CucumberOptions;
 		// "junit:Folder_Name/cucumber.xml"
 		// "me.jvt.cucumber.report.prettyReports:target/cucumber"
 		// "errorDescription.MyTestListener"
-		}
-		//tags = "@Anushna" // Tags are nothing but filters
+		},
+		tags = "@Anushna" // Tags are nothing but filters
 		// dryRun=false,
 		// extraGlue=false,
 		// monochrome = true,
@@ -34,7 +39,7 @@ import io.cucumber.junit.CucumberOptions;
 		// plugin={"json:target/cucumber.json"}
 		// snippets=false,
 		
-
+		
 )
 public class faceBookTestRunnerFile_JUnit {
 	public static boolean URLstatus = true;
@@ -42,6 +47,8 @@ public class faceBookTestRunnerFile_JUnit {
 	//public static String siteURL = "http://www.facebook.com/r.php?locale=en_GB&display=page"; //STG
 	//public static String siteURL = "http://www.facebook.com/r.php?locale=en_GB&display=page"; //Prod-beta
 	//public static String siteURL = "http://www.facebook.com/r.php?locale=en_GB&display=page"; //Prod
+	
+	
 	
 
 }
