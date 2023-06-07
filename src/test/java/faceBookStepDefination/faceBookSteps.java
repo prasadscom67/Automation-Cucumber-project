@@ -25,7 +25,7 @@ public class faceBookSteps {
 	
 	@When("provide all the details")
 	public void provide_all_the_details() {
-		System.out.println("This is  for   testing purpose");
+		System.out.println("This is  for  testing purpose");
 		
 	}
 
